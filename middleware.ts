@@ -2,6 +2,11 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 const isProtectedRoute = createRouteMatcher([
   '/dashboard(.*)',
+  '/conversation(.*)',
+  '/code(.*)',
+  '/music(.*)',
+  '/video(.*)',
+  '/image(.*)',
 ])
 
 export default clerkMiddleware((auth, req) => {
